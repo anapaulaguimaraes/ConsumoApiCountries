@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaeaea;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn-inicio {
+    padding: 5px 5px; 
+    color: #555;
+    border-radius: 20px; 
+    text-decoration: none; 
+}
+
+h1 {
+    text-align: center; 
+    color: #555; 
+    flex-grow: 1;
+    margin-left: 350px;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+}
+
+.search input[type="text"] {
+    padding: 10px;
+    width: 250px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+}
+
+.search button {
+    padding: 10px 15px;
+    background-color: #2fa3b3;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.countries {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.country-info {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 10px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.country-info:hover {
+    transform: scale(1.05);
+}
+
+.country-info img {
+    width: 80px; 
+    height: auto; 
+    border-radius: 5px;
+}
+
+.country-info h2 {
+    margin: 10px 0 5px; 
+    font-size: 1.5em; 
+    color: #555;
+}
+
+.country-info p {
+    margin: 5px 0; 
+    font-size: 1em; 
+    color: #555;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.pagination a {
+    margin: 0 5px; 
+    text-decoration: none;
+    color:#555;
+    padding: 5px 10px; 
+    border-radius: 4px; 
+    transition: background-color 0.3s;
+    font-size: 1.3em;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    h1 {
+        margin-left: 0; 
+        margin-bottom: 10px; 
+    }
+
+    .countries {
+        gap: 15px; 
+    }
+
+    .country-info {
+        width: 90%; 
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search input[type="text"] {
+        width: 100%; 
+    }
+
+    .search button {
+        width: 50%;
+        margin-top: 5px;
+    }
+
+    .country-info h2 {
+        font-size: 1.2em; 
+    }
+
+    .country-info p {
+        font-size: 0.9em;
+    }
+}
